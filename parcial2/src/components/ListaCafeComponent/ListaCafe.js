@@ -32,11 +32,10 @@ const ListaCafe = () => {
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">
-                    <FormattedMessage id="nombreTabla" />Nombre</th>
+                    Nombre</th>
                     <th scope="col">
-                    <FormattedMessage id="tablaTipo" />Tipo</th>
+                    Tipo</th>
                     <th scope="col">
-                    <FormattedMessage id="tablaRegion" />
                     Region</th>
 
                 </tr>
