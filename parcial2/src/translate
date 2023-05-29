@@ -1,0 +1,36 @@
+
+const translate = {
+  es: {
+    login: "Inicio de Sesión",
+    user: "Usuario",
+    password: "Clave",
+    ingresar: "Ingresar",
+    cancelar: "Cancelar",
+    coffeeTitle: "Café",
+    nombreTabla: "Nombre",
+    tablaTipo: "Tipo",
+    tablaRegion: "Región",
+    tipo: "Tipo: {type}",
+    region: "Región: {region}",
+    notas: "Notas: {notes}",
+    fechaCultivo: "Fecha de cultivo: {date}",
+    altura: "Altura: {altitude}",
+  },
+  en: {
+    login: "Login",
+    user: "Username",
+    password: "Password",
+    ingresar: "Submit",
+    cancelar: "Cancel",
+    nombreTabla: "Name",
+    tablaTipo: "Type",
+    tablaRegion: "Region",
+    tipo: "Type: {type}",
+    region: "Region: {region}",
+    notas: "Notes: {notes}",
+    fechaCultivo: "Cultivation Date: {date}",
+    altura: "Altitude: {altitude}",
+  },
+};
+
+export default translate;

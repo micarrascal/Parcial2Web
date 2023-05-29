@@ -3,11 +3,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import bannerimg from "../assets/images/image 1.png" // Archivo CSS personalizado
 import { json } from "react-router-dom";
 import ListaCafe from "./ListaCafeComponent/ListaCafe";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const [user, setUser] = useState('');
   const [pass, setPass] = useState('');
   const [error, setError] = useState(false);
+  const navigate = useNavigate();
+
 
   const handleLogin = (user, pass)  => {
     fetch('http://localhost:3001/login', 
@@ -20,6 +23,7 @@ const LoginForm = () => {
         if( resp.status === 200)
           {
             setError(false);
+            navigate("/cafes");
           }
         if( resp.status === 401)
           {setError(true);

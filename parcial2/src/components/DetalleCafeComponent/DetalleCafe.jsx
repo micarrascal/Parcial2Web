@@ -1,10 +1,14 @@
 import React from 'react'
 import { useState, useEffect } from "react";
+import { FormattedMessage,  useIntl } from 'react-intl';
 import imgb from "../../assets/images/image 2.png"
+
 
 
 const DetalleCafe = ({idCafe}) => {
     const [cafe,setCafe] =useState();
+    const intl = useIntl();
+
   
    
     const handleDetalleCafe = ()  => {
@@ -29,7 +33,7 @@ const DetalleCafe = ({idCafe}) => {
          <p>{cafe?.fecha_cultivo}</p>
          <img src={imgb} alt="" style={{width: "150px"}} />
          <p>Notas</p>
-         <p>{cafe?.notas}</p>
+         <p> <FormattedMessage id="notas" /> {cafe?.notas}</p>
          <h3>Cultivado a una altura de</h3>
          <h3>{cafe?.altura}</h3>
     </div>

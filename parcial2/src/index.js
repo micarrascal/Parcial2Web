@@ -4,12 +4,17 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ListaCafe from './components/ListaCafeComponent/ListaCafe';
 import LoginForm from './components/Login';
+import {IntlProvider} from 'react-intl';
+import translate from '../src/translate'
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <IntlProvider locale= {navigator.language} messages={translate[navigator.language]}>
   <div className="root-container">
 <BrowserRouter>
   <Routes>
@@ -25,10 +30,12 @@ root.render(
           <LoginForm/>
           }
         />
+          <Route path="*" element={<Navigate to="/login" replace />} />
      
   </Routes>
 </BrowserRouter>
 </div>
+</IntlProvider>
 );
 
 // If you want your app to work offline and load faster, you can change

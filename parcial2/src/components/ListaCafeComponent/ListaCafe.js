@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { FormattedMessage } from 'react-intl';
 import bannerimg from "../../assets/images/image 1.png"
 import DetalleCafe from '../DetalleCafeComponent/DetalleCafe';
 const ListaCafe = () => {
@@ -30,9 +31,13 @@ const ListaCafe = () => {
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Tipo</th>
-                    <th scope="col">Region</th>
+                    <th scope="col">
+                    <FormattedMessage id="nombreTabla" />Nombre</th>
+                    <th scope="col">
+                    <FormattedMessage id="tablaTipo" />Tipo</th>
+                    <th scope="col">
+                    <FormattedMessage id="tablaRegion" />
+                    Region</th>
 
                 </tr>
 
