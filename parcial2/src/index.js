@@ -6,6 +6,7 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ListaCafe from './components/ListaCafeComponent/ListaCafe';
+import LoginForm from './components/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,12 @@ root.render(
           path="/cafes"
           element={
           <ListaCafe />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+          <LoginForm/>
           }
         />
      
